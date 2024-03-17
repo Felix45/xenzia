@@ -1,0 +1,33 @@
+* {
+  font-family: "VT323", monospace;
+}
+
+#game-board {
+  grid-template-columns: repeat(20, 20px);
+  grid-template-rows: repeat(20, 20px);
+}
+
+.game-border-1 {
+  border: #595f43 solid 10px;
+  box-shadow: inset 0 0 0 10px #595f43;
+}
+
+.game-border-2 {
+  border: #abb78a solid 10px;
+  box-shadow: inset 0 0 0 8px #abb78a;
+}
+
+.game-border-3 {
+  border: #8b966c solid 10px;
+  background-color: #c4cfa3;
+  box-shadow: inset 0 0 0 5px #8b966c;
+}
+
+.snake {
+  border: #5a5a5a solid dotted;
+}
+
+.food {
+  background-color: #dedede;
+  border: #999 5px solid;
+}

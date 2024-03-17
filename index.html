@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet" />
     <script src="script.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Snake Xenzia</title>
 </head>
-<body>
+<body class="flex flex-col justify-center items-center h-screen m-0 bg-[#414141]">
     <div>
-        <div class="score">
+        <div class="scores flex justify-between text-[#abb78a] text-3xl font-bold">
             <h1 id="score">000</h1>
-            <h1 id="highScore">000</h1>
+            <h1 id="highScore" class="hidden">000</h1>
         </div>
-        <div class="game-boder-1">
-            <div class="game-boder-2">
-                <div class="game-boder-3">
-                    <div class="game-boder">
-                        <div id="game-board"></div>
-                    </div>
+        <div class="game-border-1 rounded-2xl">
+            <div class="game-border-2 rounded-xl">
+                <div class="game-border-3 rounded-lg">
+                    <div id="game-board" class="grid m-2 rounded-xl"></div>
                 </div>
             </div> 
         </div>
-        <h1 id="instructions-text">
-            Press spacebar to start the game
-        </h1>
     </div>
-    
+    <h1 id="instructions-text" class="absolute top-[60%] w-[300px] text-center text-3xl font-bold capitalize"> Press spacebar to start the game</h1>
+    <img src="images/snake-game-ai-gen.png" alt="snake" id="logo" class="absolute" /> 
 </body>
 </html>
