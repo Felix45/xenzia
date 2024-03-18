@@ -19,6 +19,7 @@ const draw = () => {
   board.innerHTML = '';
   drawSnake();
   drawFood();
+  updateScore();
 }
 
 // Draw Snake
@@ -70,7 +71,6 @@ const move = () => {
   if(head.x  === food.x && head.y === food.y) {
     food = generateFood();
     increaseSpeed();
-    updateScore();
     clearInterval(gameInterval);
     gameInterval = setInterval(() => {
        move();
@@ -127,9 +127,10 @@ const updateHighScore = () => {
     let highScore = parseInt(localStorage.getItem('highScore')) || 0;
     if(score > highScore) {
        highScore = score;
-       highScoreText.textContent = highScore.toString().padStart(3,'0');
-       localStorage.setItem('highScore', highScore);
     }
+    highScoreText.classList.remove('hidden');
+    highScoreText.textContent = highScore.toString().padStart(3,'0');
+    localStorage.setItem('highScore', highScore);
 
 }
 
