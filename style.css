@@ -3,22 +3,27 @@
 }
 
 #game-board {
+  margin: 5px;
+  border-radius: 100px;
   grid-template-columns: repeat(20, 20px);
   grid-template-rows: repeat(20, 20px);
 }
 
 .game-border-1 {
   border: #595f43 solid 10px;
+  border-radius: 30px;
   box-shadow: inset 0 0 0 10px #595f43;
 }
 
 .game-border-2 {
-  border: #abb78a solid 10px;
-  box-shadow: inset 0 0 0 8px #abb78a;
+  border: #abb78a solid 8px;
+  border-radius: 26px;
+  box-shadow: inset 0 0 0 10px #abb78a;
 }
 
 .game-border-3 {
-  border: #8b966c solid 10px;
+  border: #8b966c solid 30px;
+  border-radius: 20px;
   background-color: #c4cfa3;
   box-shadow: inset 0 0 0 5px #8b966c;
 }
